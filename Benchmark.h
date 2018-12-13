@@ -7,6 +7,7 @@
 #include <chrono>
 #include <iostream>
 #include <string>
+#include <type_traits>
 #include <utility>
 
 template<unsigned int Count>
@@ -25,7 +26,7 @@ private:
 	double maxTime;
 
 public:
-	template<typename Function, typename... Args>
+	template<typename Function, typename... Args, typename = std::enable_if_t<std::is_invocable_v<Function, Args...>>>
 	Benchmark(const std::string& name, Function function, Args... parameters)
 		: name(name)
 	{
