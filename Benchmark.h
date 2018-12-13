@@ -1,3 +1,7 @@
+#pragma once
+#ifndef BENCHMARK_H
+#define BENCHMARK_H
+
 #include <algorithm>
 #include <array>
 #include <chrono>
@@ -61,3 +65,5 @@ public:
 		std::cout << "====================================================" << std::endl;
 	}
 };
+
+#endif
