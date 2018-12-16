@@ -27,7 +27,7 @@ private:
 
 public:
 	template<typename Function, typename... Args, typename = std::enable_if_t<std::is_invocable_v<Function, Args...>>>
-	explicit Benchmark(const std::string& name, Function function, Args... parameters)
+	explicit Benchmark(const std::string& name, Function function, Args&&... parameters)
 		: name(name)
 	{
 		long long total = 0;
