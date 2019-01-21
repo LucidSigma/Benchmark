@@ -36,9 +36,7 @@ public:
 		for (unsigned int i = 0; i < Count; i++)
 		{
 			TimePoint beginTime = Clock::now();
-
 			function(std::forward<Args>(parameters)...);
-
 			TimePoint endTime = Clock::now();
 
 			Milliseconds milliseconds = std::chrono::duration_cast<Milliseconds>(endTime - beginTime);
@@ -63,7 +61,7 @@ public:
 		std::cout << "Minimum time:            " << minTime << "ms\n";
 		std::cout << "Maximum time:            " << maxTime << "ms\n";
 		std::cout << "Range:                   " << (maxTime - minTime) << "ms\n";
-		std::cout << "====================================================" << std::endl;
+		std::cout << "====================================================\n";;
 	}
 };
 
