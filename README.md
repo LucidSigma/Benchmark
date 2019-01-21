@@ -8,10 +8,13 @@ Requires a C++17 compiler.
 ## Usage
 Create the benchmark class template with the template parameter being the amount of times to benchmark the function.
 
-Constructor arguments:
+### Constructor arguments:
 **name** - the name to give the benchmark
+
 **function** - the function to benchmark
+
 **parameters** - a parameter pack to contain the arguments of the function
+
 
 Call the DisplayResults function to display the results of the benchmark.
 
