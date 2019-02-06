@@ -27,7 +27,7 @@ The benchmark will test the function **TestFunction** with the parameters 3 and 
 
 int TestFunction(int a, int b) noexcept
 {
-	for (int i = 0; i < 1'000'000; i++)
+	for (unsigned int i = 0; i < 1'000'000; i++)
 	{
 		a += b;
 	}
