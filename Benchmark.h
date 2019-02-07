@@ -10,7 +10,7 @@
 #include <type_traits>
 #include <utility>
 
-template<unsigned int Count>
+template <unsigned int Count>
 class Benchmark
 {
 private:
@@ -26,7 +26,7 @@ private:
 	double maxTime;
 
 public:
-	template<typename Function, typename... Args, typename = std::enable_if_t<std::is_invocable_v<Function, Args...>>>
+	template <typename Function, typename... Args, typename = std::enable_if_t<std::is_invocable_v<Function, Args...>>>
 	explicit Benchmark(const std::string& name, Function function, Args&&... parameters)
 		: name(name)
 	{
